@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  background:#f9f8e3;
+  background-image: url("./assets/backImage.jpg");
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-position: 50%;
+  background-size: 110vh;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+  width: 400px;
+  background:rgba(128,188,40,0.8) ;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  box-shadow: 2px 4px 20px #23622b;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0px;
+}
+
+.size {
+  width: 70px;
+  height: 70px;
+  margin-top: 30px;
+}
+
+h1 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 38px;
+  letter-spacing: 1px;
+  margin: 0;
+  text-shadow: 1px 1px 8px #003200;
+}
+
+h2 {
+  font-family: 'Roboto Slab', serif;
+  margin-bottom: 0;
+  font-size: 30px;
+  letter-spacing: 1px;
+  color: #EA5C2B;
+
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-self: center;
+  background: #fff;
+  padding: 5px;
+  width: 80%;
+  border-radius: 8px;
+}
+
+.search {
+  width: 100%;
+  color: #003200;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  outline: none;
+  padding: 0px 10px;
+}
+
+button {
+  border: none;
+  background: #fff;
+  cursor: pointer;
+}
+
+.recipes {
+  background:#fff;
+  color: #003200;
+  padding: 0px 10px;
+  margin: 40px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.line {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  margin: 0px 10px;
+  background-color: rgba(246,216,96,0.4);
+  padding-bottom: 20px;
+  border-radius: 8px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.roundImage {
+  border-radius: 50%;
+  margin: 20px 0px;
+}
+
+li {
+  padding: 3px;
+  align-self: flex-start;
+  text-align: left;
+}
+
+.bold {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.notBold {
+  font-weight: lighter;
+  font-size: 18px;
+}
+
+.otherColor {
+  color: #6F8856;
+}
+
+hr {
+  background: #80bc28;
+  height: 3px;
+  width: 80%;
+  margin-top: 50px;
+}
+
+.bottomInfo {
+  color: #fff;
+  font-size: 14px;
+  margin: 30px 0px 10px;
+}
+
+.top {
+  margin: 0px 0px 30px;
+  color:#003200;
+}
+
+a:hover {
+  color:#003200;
+}
+
+@media all and (max-width: 540px) {
+  .App {
+    width: 100%;
+  }
+
+  .roundImage {
+    width: 90%;
+  }
+}
+
+
+
+
+
