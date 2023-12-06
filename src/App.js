@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useLayoutEffect } from "react";
 import searchIcon from './assets/searchIcon.png';
 import olivesIcon from './assets/OlivesIcon.png';
 import './App.css';
-import MyRecipesComponent from "./MyRecipesComponent";
+import MyRecipesComponent from "./components/MyRecipesComponent";
 import { gsap } from "gsap";
 
 function App() {
