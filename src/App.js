@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useLayoutEffect } from "react";
 import searchIcon from './assets/searchIcon.png';
 import olivesIcon from './assets/OlivesIcon.png';
 import './App.css';
 import MyRecipesComponent from "./MyRecipesComponent";
+import { gsap } from "gsap";
 
 function App() {
 
@@ -12,6 +13,25 @@ function App() {
   const [mySearch, setMySearch] = useState("");
   const [myRecipes, setMyRecipes] = useState([]);
   const [wordSubmitted, setWordSubmitted] = useState("olives");
+
+  const app = useRef();
+  const tl = useRef();
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      tl.current = gsap.timeline()
+        .from(".size", {
+          delay: 0.5, duration: 1, y: -50, opacity: 0, ease: "back.out"
+        })
+        .from("h1", {
+          y: -70, duration: 1, opacity: 0, ease: "back.out"
+        })
+        .from("form", {
+          y: 50, duration: 1, opacity: 0, ease: "back.out"
+        });
+    }, app);
+    return () => ctx.revert();
+  }, []);
 
   useEffect (() => {
     const getRecipe = async () => {
@@ -32,7 +52,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App" ref={app}>
       <img className="size" src={olivesIcon} alt="olives" />
       <div className="container">
         <h1>Find a Recipe</h1>
