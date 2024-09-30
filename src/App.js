@@ -4,6 +4,7 @@ import olivesIcon from './assets/OlivesIcon.png';
 import './App.css';
 import MyRecipesComponent from "./components/MyRecipesComponent";
 import { gsap } from "gsap";
+import { ScrollToTopBtn } from "./components/ScrollToTopBtn";
 
 function App() {
 
@@ -77,8 +78,9 @@ function App() {
         />
       ))}
       </div>
-        <p className="bottomInfo">Developed by <a className="bottomInfo" href="https://natalia-musikhina-portfolio.glitch.me/" target="_blank" rel="noreferrer">Natalia Musikhina</a></p>
+        <p className="bottomInfo">Developed by <a className="bottomInfo" href="https://natalia-webdev.com" target="_blank" rel="noreferrer">Natalia Musikhina</a></p>
         <p className="bottomInfo top">Powered by <a className="bottomInfo top" href="https://www.edamam.com/" target="_blank" rel="noreferrer">www.edamam.com</a></p>
+        <ScrollToTopBtn />
     </div>
   );
 }
